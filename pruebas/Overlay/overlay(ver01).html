@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Misión Fotogrametría</title>
+        <link rel="stylesheet" href="overlay.css"></link>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </head>
+    <body>
+        <div class="container" id="top">
+            <div id="topPanel" class="rectangle">
+                
+            </div>
+        </div>
+        <div class="container" id="bottom">
+            <div id="leftPanel" class="rectangle">
+
+            </div>
+            <div id="MapPanel" class="rectangle">
+                
+            </div>
+        </div>
+        <script>
+
+            const map = L.map('MapPanel').setView([40.4405346, -3.7238251], 17);
+        
+            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            const marker = L.marker([40.4405346, -3.7238251]).addTo(map)
+		        .bindPopup('<b>Aula de Expresión Gráfica</b><br />ETSIAE, Edificio B, Planta 2');
+
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                    .openOn(map);
+            }
+        
+            map.on('click', onMapClick);
+        
+        </script>
+    </body>
+</html>

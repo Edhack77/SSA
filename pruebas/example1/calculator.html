@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caluladora Chachiguachi</title>
+    <link rel="stylesheet" href="calculator.css"></link>
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <input type="text" id="display" disabled/>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="addText('1')"/></td>
+            <td><input type="button" value="2" onclick="addText('2')"/></td>
+            <td><input type="button" value="3" onclick="addText('3')"/></td>
+            <td><input type="button" value="+" class="operator" onclick="addText('+')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="addText('4')"/></td>
+            <td><input type="button" value="5" onclick="addText('5')"/></td>
+            <td><input type="button" value="6" onclick="addText('6')"/></td>
+            <td><input type="button" value="-" class="operator" onclick="addText('-')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="addText('7')"/></td>
+            <td><input type="button" value="8" onclick="addText('8')"/></td>
+            <td><input type="button" value="9" onclick="addText('9')"/></td>
+            <td><input type="button" value="÷" class="operator" onclick="addText('/')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" id="ClearBtn" onclick="clearText()"/></td>
+            <td><input type="button" value="0" onclick="addText('0')"/></td>
+            <td><input type="button" value="=" id="SolveBtn" onclick="solve()"/></td>
+            <td><input type="button" value="*" class="operator" onclick="addText('*')"/></td>
+        </tr>
+    </table>
+</body>
+</html>

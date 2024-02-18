@@ -1,0 +1,25 @@
+#display{
+    width: 410px;
+    text-align: right;
+    background-color: rgb(187, 224, 119);
+}
+
+input{
+    height: 100px;
+    width: 100px;
+    font-size: xx-large;
+}
+
+.operator{
+    background-color: blue;
+    color: white;
+}
+
+#ClearBtn{
+    background-color: red;
+    color: white;
+}
+
+#SolveBtn{
+    background-color: white;
+}
